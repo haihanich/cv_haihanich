@@ -1,0 +1,11 @@
+/* line 1, main/static/css/cursor.scss */
+.circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+  background: #cb4b16;
+  border-radius: 80%;
+  backface-visibility: hidden; }

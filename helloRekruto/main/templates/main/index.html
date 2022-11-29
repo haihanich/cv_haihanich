@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %} {% load static %} {% block title %} Haihanich
+{%endblock %} {% block link %}
+<link rel="stylesheet" type="text/css" href="{% static '/css/styles.css' %}" />
+{% endblock %} {% block content %}
+<header>
+  <div class="header">
+    <h1>Hi,</h1>
+    <h2>welcome to my page!</h2>
+  </div>
+</header>
+<main>
+  <div class="main_img">
+    <img
+      src="{% static 'images/me_with_guitar.jpg' %}"
+      alt="haihanich with guitar"
+    />
+  </div>
+  <div>
+    <p id="main_text">
+      If u read this message, pls, leave a comment in the form below, so I can
+      see that u were here! <br />Ty! Have a nice day!
+    </p>
+  </div>
+</main>
+<div class="form">
+  <form method="post">
+    {% csrf_token %}
+    <br />
+    {{ form.title }}
+    <br />
+    {{ form.comment }}<br />
+    <button type="submit" class="btn btn-success">Send</button>
+    <span>{{ error }}</span>
+  </form>
+</div>
+{% endblock %}
